@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(30, 30, 30);
+}
+
+h1 {
+  text-align: center;
+  margin-top: -20vh;
+  margin-bottom: 20px;
+  color: rgba(255,203,0,1);
+  font-size: 80px;
+  font-family: 'Arvo', serif;
+}
+
+.address {
+  text-align: center;
+  font-size: 24px;
+  color: rgba(255,203,0,1);
+  font-family: 'Arvo', serif;
+}
+
+.street {
+  margin-right: 20px;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  margin-top: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links i {
+  font-size: 120px;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.links i:hover {
+  color: rgb(30, 30, 30);
+  background: rgb(2,0,36);
+  background: linear-gradient(146deg, rgba(2,0,36,1) 0%, rgba(255,203,0,1) 0%, rgba(255,235,168,1) 49%, rgba(255,190,0,1) 100%);
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 0;
+  }
+
+  .links i {
+    font-size: 60px;
+  }
+}
+
