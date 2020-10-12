@@ -1,0 +1,25 @@
+{
+  "name": "galery-goldig.de",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.6",
+    "sass-loader": "^10.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophfranke/galerie-goldig.de.git"
+  },
+  "author": "Christoph Franke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christophfranke/galerie-goldig.de/issues"
+  },
+  "homepage": "https://github.com/christophfranke/galerie-goldig.de#readme"
+}

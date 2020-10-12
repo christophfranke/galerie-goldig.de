@@ -1,0 +1,11 @@
+<template>
+  <Nuxt />
+</template>
+
+<style>
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(30, 30, 30);
+}
+</style>
