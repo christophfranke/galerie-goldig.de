@@ -1,8 +1,8 @@
 <template>
   <div class="center">
     <div>
-      <div class="title">
-        <h1>galerie goldig</h1>
+      <div>
+        <h1 class="title">galerie goldig</h1>
         <div class="address">
           <span class="street">malplaquetstraße 42</span>
           <span>13347 berlin</span>
@@ -28,7 +28,7 @@
   }
 }
 
-h1 {
+.title {
   text-align: center;
   margin-top: 0;
   margin-bottom: 20px;
