@@ -4,7 +4,8 @@
       <div>
         <h1 class="title">galerie goldig</h1>
         <div class="address">
-          <span class="street">malplaquetstraße 42</span>
+          <span>malplaquetstraße 42</span>
+          <span class="middot">&middot;</span>
           <span>13347 berlin</span>
         </div>
       </div>
@@ -49,8 +50,8 @@
   font-family: 'Arvo', serif;
 }
 
-.street {
-  margin-right: 20px;
+.middot {
+  margin: 0 10px;
 }
 
 .center {
