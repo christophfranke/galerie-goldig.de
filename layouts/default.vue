@@ -13,7 +13,7 @@
 const STAR_LIFETIME = 150
 const STAR_BASE_TIME = 2000
 const MAX_STARS = 200
-
+let currentKey = 0
 
 export default {
   data() {
@@ -28,13 +28,14 @@ export default {
         x: Math.round(Math.random() * 100),
         y: Math.round(Math.random() * 100)
       }
+      currentKey += 1
       const spot = {
         style: {
           left: `${position.x}vw`,
           top: `${position.y}vh`,
           backgroundColor: `rgba(255, 203, 0, ${Math.random()})`
         },
-        key: `${position.x}x${position.y}`
+        key: currentKey
       }
 
       this.spots.push(spot)
@@ -65,6 +66,7 @@ body {
 
 <style lang="scss" scoped>
 .sky {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
