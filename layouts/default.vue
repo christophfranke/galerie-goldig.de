@@ -10,8 +10,8 @@
 </template>
 
 <script>
-const STAR_LIFETIME = 150
-const STAR_BASE_TIME = 2000
+const STAR_LIFETIME = 100
+const STAR_BASE_TIME = 5000
 const MAX_STARS = 200
 let currentKey = 0
 
