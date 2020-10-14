@@ -14,6 +14,7 @@ const STAR_LIFETIME = 150
 const STAR_BASE_TIME = 2000
 const MAX_STARS = 200
 
+
 export default {
   data() {
     return {
