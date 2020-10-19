@@ -1,14 +1,6 @@
 <template>
   <div class="center">
     <div>
-      <div>
-        <h1 class="title">galerie goldig</h1>
-        <div class="address">
-          <span>malplaquetstraße 42</span>
-          <span class="middot">&middot;</span>
-          <span>13347 berlin</span>
-        </div>
-      </div>
       <div class="links">
         <a href="https://www.facebook.com/goldig.gallery/" target="_blank">
           <i class="fab icon fa-facebook-f"></i>
@@ -29,30 +21,6 @@
   }
 }
 
-.title {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: rgba(255,203,0,1);
-  font-family: 'Arvo', serif;
-  font-size: 40px;
-
-  @include from(800) {
-    font-size: 80px;
-    margin-top: -20vh;
-  }
-}
-
-.address {
-  text-align: center;
-  font-size: 24px;
-  color: rgba(255,203,0,1);
-  font-family: 'Arvo', serif;
-}
-
-.middot {
-  margin: 0 10px;
-}
 
 .center {
   height: 100vh;
@@ -63,12 +31,19 @@
 
 .links {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  text-align: center;
+
+  @include from(500) {
+    width: 65vw;
+    flex-direction: row;
+  }
 
   font-size: 60px;
-  margin-top: 10vh;
   @include from(800) {
-    margin-top: 20vh;
+    width: 40vw;
+    max-width: 600px;
     font-size: 120px;
   }
 
@@ -80,8 +55,8 @@
 
     &:hover {
       color: rgb(30, 30, 30);
-      background: rgb(2,0,36);
-      background: linear-gradient(146deg, rgba(2,0,36,1) 0%, rgba(255,203,0,1) 0%, rgba(255,235,168,1) 49%, rgba(255,190,0,1) 100%);
+      background: rgba(2,0,36, 1);
+      background: linear-gradient(146deg, rgba(255,203,0,1) 0%, rgba(255,235,168,1) 49%, rgba(255,190,0,1) 100%);
     }
   }
 }
