@@ -9,7 +9,7 @@ export default () => new Vuex.Store({
     content: ({ content }) => content,
     menu: ({ content }) => content.find(doc => doc.type === 'menu'),
     footer: ({ content }) => content.find(doc => doc.type === 'footer'),
-    homepage: ({ content }) => content.find(doc => doc.type === 'homepage'),
+    homepage: ({ content }) => content.find(doc => doc.type === 'homepage').data,
     exhibitions: (state, { content }) => content.filter(doc => doc.type === 'exhibition'),
     exhibition: (state, { exhibitions }) => slug => {
       const exhibition = exhibitions.find(exhibition => exhibition.uid === slug)

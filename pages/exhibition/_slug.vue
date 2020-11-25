@@ -11,7 +11,7 @@ import components from '@/components'
 import slices from '@/slices'
 
 export default {
-  name: 'Page',
+  name: 'Exhibition',
   components: {
     ...components,
     ...slices
