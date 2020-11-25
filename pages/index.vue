@@ -14,13 +14,7 @@
 </template>
 
 <style lang="scss" scoped>
-
-@mixin from($width) {
-  @media only screen and (min-width: #{$width}px) {
-    @content
-  }
-}
-
+@import '@/style/imports';
 
 .center {
   height: 100vh;
