@@ -25,7 +25,7 @@ export default {
       return this.$store.getters.page(this.slug)
     },
     slices() {
-      return this.$store.getters.slices(this.slug)
+      return this.$store.getters.slices(this.page)
     },
   },
 

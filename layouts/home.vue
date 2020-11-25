@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Stars />
     <Nuxt />
   </div>
 </template>
@@ -15,5 +16,10 @@ export default {
 </script>
 
 <style>
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(30, 30, 30);
+}
 </style>
 

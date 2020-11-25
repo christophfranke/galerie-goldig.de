@@ -20,7 +20,7 @@ export default () => new Vuex.Store({
       const page = pages.find(page => page.uid === slug)
       return page && page.data
     },
-    slices: (state, { page, home }) => slug => (slug ? page(slug) : home).body
+    slices: () => page => page.body
   },
   state: {
     content: {}

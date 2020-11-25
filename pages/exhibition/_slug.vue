@@ -26,12 +26,12 @@ export default {
       return this.$store.getters.exhibition(this.slug)
     },
     slices() {
-      return this.$store.getters.slices(this.slug)
+      return this.$store.getters.slices(this.page)
     },
   },
 
   asyncData({ params, store, error }) {
-    if (!store.getters.page(params.page)) {
+    if (!store.getters.exhibition(params.slug)) {
       error({ statusCode: 404, message: 'Page not found' })
     }
   }
