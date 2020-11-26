@@ -134,7 +134,13 @@ $transparent-background: rgba($dark, 0.8);
   }
 
   .image {
-    width: Max(25vw, 25vh);
+    width: Max(30vw, 30vh);
+    @include from(m) {
+      width: Max(25vw, 25vh);
+    }
+    @include from(l) {
+      width: Max(20vw, 20vh);
+    }
   }
 
   .artist {
