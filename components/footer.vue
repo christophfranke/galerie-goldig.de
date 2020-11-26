@@ -42,8 +42,9 @@ footer {
   color: $dark;
   background: $gold-background;
   font-size: 20px;
-  a, a:visited {
+  .cms-content a, a:visited {
     color: $dark;
+    @include no-gold-text;
     &:hover {
       text-decoration: underline;
     }

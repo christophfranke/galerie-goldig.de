@@ -96,6 +96,7 @@ $transparent-background: rgba($dark, 0.8);
   align-items: center;
 
   .title {
+    text-decoration: none;
     margin: 0 auto 0 0;
     display: block;
 
@@ -123,6 +124,10 @@ $transparent-background: rgba($dark, 0.8);
   bottom: 5vh;
   left: 5vw;
   border-radius: 10px;
+
+  a {
+    text-decoration: none;
+  }
 
   .date {
     margin-bottom: 15px;

@@ -21,4 +21,7 @@ p {
 a, a:visited {
   color: $bright;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

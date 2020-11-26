@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <h1 class="title">{{ text(page.title) }}</h1>
     <template v-for="(slice, index) in slices">
       <Slice :slice="slice" :key="index" />
     </template>
@@ -9,6 +10,7 @@
 <script>
 import components from '@/components'
 import slices from '@/slices'
+import text from '@/util/text'
 
 export default {
   name: 'Page',
@@ -29,6 +31,10 @@ export default {
     },
   },
 
+  methods: {
+    text
+  },
+
   asyncData({ params, store, error }) {
     if (!store.getters.page(params.page)) {
       error({ statusCode: 404, message: 'Page not found' })
@@ -36,3 +42,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.main {
+  padding: 20px;
+  margin: 20px auto 100px auto;
+  width: 50vw;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+</style>

@@ -49,3 +49,17 @@
     }
   }
 </script>
+
+<style lang="scss">
+@import '@/style/imports';
+
+.cms-content {
+  a {
+    text-decoration: none;
+    @include gold-text;
+    &:hover {
+      @include no-gold-text;
+    }
+  }
+}
+</style>

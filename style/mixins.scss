@@ -16,6 +16,12 @@ $breakpoints: (
   -webkit-text-fill-color: transparent;
 }
 
+@mixin no-gold-text {
+  background: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: currentColor;
+}
+
 @mixin social-media-icon {
   color: $bright;
   font-size: 40px;
