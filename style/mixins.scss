@@ -1,5 +1,11 @@
-@mixin from($width) {
-  @media only screen and (min-width: #{$width}px) {
+$breakpoints: (
+  s: 0,
+  m: 768,
+  l: 1024
+);
+
+@mixin from($point) {
+  @media only screen and (min-width: #{map-get($breakpoints, $point)}px) {
     @content
   }
 }

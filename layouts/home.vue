@@ -1,19 +1,6 @@
 <template>
-  <div>
-    <Stars />
-    <Nuxt />
-  </div>
+  <Nuxt />
 </template>
-
-<script>
-import Stars from '@/components/stars'  
-
-export default {
-  components: {
-    Stars
-  }
-}
-</script>
 
 <style lang="scss">
 @import '@/style/global'

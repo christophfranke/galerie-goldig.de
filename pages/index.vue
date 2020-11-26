@@ -19,7 +19,7 @@
           <div class="date">
             <Date :date="exhibition.start" /> – <Date :date="exhibition.end" />
           </div>
-          <img :src="exhibition.image.small.url" />
+          <img class="image" :src="exhibition.image.small.url" />
           <div class="artist">Ausstellung von {{ text(exhibition.artist) }}</div>
         </nuxt-link>
       </div>
@@ -37,6 +37,7 @@ import text from '@/util/text'
 
 export default {
   name: 'Home',
+  layout: 'home',
   components: {
     ...components,
     ...slices
@@ -47,7 +48,6 @@ export default {
       return this.$router.currentRoute.params.page
     },
     page() {
-      console.log(this.$store.getters.currentExhibition)
       return this.$store.getters.homepage
     },
     slices() {
@@ -64,9 +64,7 @@ export default {
   },
 
   methods: {
-    text (prismicText) {
-      return text(prismicText)
-    }
+    text
   },
 
   asyncData({ params, store, error }) {
@@ -129,6 +127,10 @@ $transparent-background: rgba($dark, 0.8);
 
   .date {
     margin-bottom: 15px;
+  }
+
+  .image {
+    width: Max(30vw, 30vh);
   }
 
   .artist {
