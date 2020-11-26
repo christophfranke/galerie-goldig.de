@@ -109,8 +109,7 @@ $transparent-background: rgba($dark, 0.8);
     &:hover {
       color: $dark;
       background: $gold;
-      background: linear-gradient(146deg, rgba(255,203,0,1) 0%, rgba(255,235,168,1) 49%, $gold 100%);
-
+      background: $gold-background;
     }
   }
 }
