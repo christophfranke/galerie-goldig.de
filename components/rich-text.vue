@@ -24,6 +24,9 @@
         return PrismicDOM.RichText
           .asHtml(this.content, linkResolver)
           .replace(/<a([^>]*)>/g, (match, group) => {
+            if (group.match(/mailto:/i)) {
+              return match
+            }
             return `<a${group} onclick="return goto(this)">`
           })
       },

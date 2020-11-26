@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/style/imports';
 
 footer {
@@ -42,9 +42,12 @@ footer {
   color: $dark;
   background: $gold-background;
   font-size: 20px;
+  a, a:visited {
+    color: $dark;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-a, a:visited {
-  color: $dark;
-}
 </style>

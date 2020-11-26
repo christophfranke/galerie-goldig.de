@@ -2,7 +2,7 @@
   <div class="main">
     <div class="fullscreen" :style="backgroundStyle">
       <div class="top-bar">
-        <h1 class="title">goldig</h1>
+        <nuxt-link to="/" class="title"><h1>goldig</h1></nuxt-link>
         <div class="social-media">
           <a href="https://www.facebook.com/goldig.gallery/" target="_blank">
             <i class="fab icon fa-facebook-f"></i>
@@ -14,7 +14,7 @@
       </div>
 
       <div class="exhibition" v-if="exhibition">
-        <nuxt-link :to="exhibition.url">
+        <nuxt-link :to="exhibition.url" class="link">
           <h2 class="title">{{ text(exhibition.title) }}</h2>
           <div class="date">
             <Date :date="exhibition.start" /> – <Date :date="exhibition.end" />
@@ -96,21 +96,21 @@ $transparent-background: rgba($dark, 0.8);
   align-items: center;
 
   .title {
-    font-size: 40px;
     margin: 0 auto 0 0;
+    display: block;
+
+    h1 {
+      @include gold-text;
+      font-size: 40px;
+    }
+
+    &:hover {
+      text-transform: uppercase;
+    }
   }
 
   .icon {
-    color: $bright;
-    font-size: 40px;
-    padding: 10px;
-    border-radius: 8px;
-
-    &:hover {
-      color: $dark;
-      background: $gold;
-      background: $gold-background;
-    }
+    @include social-media-icon;
   }
 }
 
@@ -134,6 +134,12 @@ $transparent-background: rgba($dark, 0.8);
 
   .artist {
     margin-top: 15px;
+  }
+
+  .link:hover {
+    .title, .date, .artist {
+      @include gold-text;
+    }
   }
 }
 </style>
