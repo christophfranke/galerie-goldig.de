@@ -129,7 +129,7 @@ $transparent-background: rgba($dark, 0.8);
   }
 
   .image {
-    width: Max(30vw, 30vh);
+    width: Max(25vw, 25vh);
   }
 
   .artist {
