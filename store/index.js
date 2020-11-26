@@ -15,6 +15,19 @@ export default () => new Vuex.Store({
       const exhibition = exhibitions.find(exhibition => exhibition.uid === slug)
       return exhibition && exhibition.data
     },
+    currentExhibition: (state, { exhibitions }) => {
+      const exhibition = exhibitions.find(exhibition => {
+        const start = new Date(exhibition.data.start)
+        const end = new Date(exhibition.data.end)
+        const now = Date.now()
+        return start <= now && now <= end
+      })
+
+      return exhibition && {
+        ...exhibition.data,
+        url: linkResolver(exhibition)
+      }
+    },
     pages: (state, { content }) => content.filter(doc => doc.type === 'page'),
     page: (state, { pages }) => slug => {
       const page = pages.find(page => page.uid === slug)

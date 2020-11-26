@@ -1,8 +1,19 @@
 @import './imports';
 
 body {
+  font-family: 'Nunito', sans-serif;
   padding: 0;
   margin: 0;
+  color: $bright;
   background-color: $dark;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a, a:visited {
+  color: $bright;
+  text-decoration: none;
 }
