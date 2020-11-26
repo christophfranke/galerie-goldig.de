@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div class="exhibition">
+      <div class="exhibition" v-if="exhibition">
         <nuxt-link :to="exhibition.url">
           <h2 class="title">{{ text(exhibition.title) }}</h2>
           <div class="date">
