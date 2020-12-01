@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="image" :src="exhibition.image.url" />
+    <img class="image" :src="exhibition.image.url" v-if="exhibition.image.url" />
     <div class="main">
       <div class="left">
         <h1 class="title">{{ text(exhibition.title) }}</h1>

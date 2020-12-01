@@ -19,11 +19,16 @@
           <div class="date">
             <Date :date="exhibition.start" /> – <Date :date="exhibition.end" />
           </div>
-          <img class="image" :src="exhibition.image.small.url" />
+          <img class="image" :src="exhibition.thumbnail.url" />
           <div class="artist">Ausstellung von {{ text(exhibition.artist) }}</div>
         </nuxt-link>
       </div>
+
+      <div class="goldig" v-else>
+        <h1>GOLDIG</h1>
+      </div>
     </div>
+
     <template v-for="(slice, index) in slices">
       <Slice :slice="slice" :key="index" />
     </template>
@@ -121,9 +126,13 @@ $transparent-background: rgba($dark, 0.8);
   padding: 40px 60px;
   background-color: $transparent-background;
   position: absolute;
-  bottom: 5vh;
-  left: 5vw;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 10px;
+  top: Max(17vh, 100px);
+  @include from(m) {
+    top: 25vh;
+  }
 
   a {
     text-decoration: none;
@@ -134,13 +143,8 @@ $transparent-background: rgba($dark, 0.8);
   }
 
   .image {
-    width: Max(30vw, 30vh);
-    @include from(m) {
-      width: Max(25vw, 25vh);
-    }
-    @include from(l) {
-      width: Max(20vw, 20vh);
-    }
+    width: auto;
+    height: 45vh;
   }
 
   .artist {
@@ -151,6 +155,27 @@ $transparent-background: rgba($dark, 0.8);
     .title, .date, .artist {
       @include gold-text;
     }
+  }
+}
+
+.goldig {
+  position: absolute;
+  left: 50%;
+  top: 20vh;
+  transform: translateX(-50%);
+
+  background: $transparent-background;
+  width: 50vw;
+  height: 70vh;
+  border-radius: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 120px;
+    @include gold-text;
   }
 }
 </style>

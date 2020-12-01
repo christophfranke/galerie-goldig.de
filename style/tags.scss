@@ -25,3 +25,8 @@ a, a:visited {
     text-decoration: underline;
   }
 }
+
+img {
+  width: calc(100% - 16px);
+  border: 8px solid $bright;
+}
