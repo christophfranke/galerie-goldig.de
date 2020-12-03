@@ -1,4 +1,5 @@
 export default {
+  plugins: [{ src: 'plugins/client-only', ssr: false }],
   head: {
     meta: [{
       name: 'viewport',

@@ -58,7 +58,8 @@ export default {
 @import '@/style/imports';
 
 .image {
-  width: 100vw;
+  width: calc(100vw - 16px);
+  border: 8px solid $bright;
 }
 
 .main {

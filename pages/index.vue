@@ -1,17 +1,7 @@
 <template>
   <div class="main">
     <div class="fullscreen" :style="backgroundStyle">
-      <div class="top-bar">
-        <nuxt-link to="/" class="title"><h1>goldig</h1></nuxt-link>
-        <div class="social-media">
-          <a href="https://www.facebook.com/goldig.gallery/" target="_blank">
-            <i class="fab icon fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/goldig.gallery/" target="_blank">
-            <i class="fab icon fa-instagram"></i>
-          </a>
-        </div>
-      </div>
+      <Header class="top-bar" />
 
       <div class="exhibition" v-if="exhibition">
         <nuxt-link :to="exhibition.url" class="link">
@@ -19,7 +9,9 @@
           <div class="date">
             <Date :date="exhibition.start" /> – <Date :date="exhibition.end" />
           </div>
-          <img class="image" :src="exhibition.thumbnail.url" />
+          <div class="image">
+            <img :src="exhibition.thumbnail.url" />
+          </div>
           <div class="artist">Ausstellung von {{ text(exhibition.artist) }}</div>
         </nuxt-link>
       </div>
@@ -36,6 +28,7 @@
 </template>
 
 <script>
+import Header from '@/components/header'
 import components from '@/components'
 import slices from '@/slices'
 import text from '@/util/text'
@@ -45,7 +38,8 @@ export default {
   layout: 'home',
   components: {
     ...components,
-    ...slices
+    ...slices,
+    Header
   },
 
   computed: {
@@ -95,29 +89,7 @@ $transparent-background: rgba($dark, 0.8);
 
 .top-bar {
   padding: 10px;
-  width: calc(100vw - 20px);
   background-color: $transparent-background;
-  display: flex;
-  align-items: center;
-
-  .title {
-    text-decoration: none;
-    margin: 0 auto 0 0;
-    display: block;
-
-    h1 {
-      @include gold-text;
-      font-size: 40px;
-    }
-
-    &:hover {
-      text-transform: uppercase;
-    }
-  }
-
-  .icon {
-    @include social-media-icon;
-  }
 }
 
 
@@ -145,6 +117,14 @@ $transparent-background: rgba($dark, 0.8);
   .image {
     width: auto;
     height: 45vh;
+    padding: 8px 0;
+    background-color: $bright;
+
+    img {
+      margin-top: -8px;
+      display: block;
+      border: 8px solid transparent;
+    }
   }
 
   .artist {
@@ -154,6 +134,9 @@ $transparent-background: rgba($dark, 0.8);
   .link:hover {
     .title, .date, .artist {
       @include gold-text;
+    }
+    .image {
+      background: $gold-background;
     }
   }
 }
