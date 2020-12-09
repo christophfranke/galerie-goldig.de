@@ -28,5 +28,6 @@ a, a:visited {
 
 img {
   width: calc(100% - 16px);
+  height: auto;
   border: 8px solid $bright;
 }
