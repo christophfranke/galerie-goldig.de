@@ -12,7 +12,7 @@
           <div class="image">
             <img :src="exhibition.thumbnail.url" />
           </div>
-          <div class="artist">Ausstellung von {{ text(exhibition.artist) }}</div>
+          <div class="artist">{{ text(exhibition.artist) }}</div>
         </nuxt-link>
       </div>
 
