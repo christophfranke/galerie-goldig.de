@@ -18,7 +18,6 @@ export default {
 
   computed: {
     footer() {
-      console.log(this.$store.getters.footer.data)
       return this.$store.getters.footer.data
     }
   },
